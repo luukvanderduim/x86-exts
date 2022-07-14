@@ -1,5 +1,5 @@
 [package]
-name = "abi-identifier"
+name = "x86-exts"
 version = "0.1.0"
 authors = ["Luuk van der Duim <luukvanderduim@gmail.com>"]
 edition = "2018"
@@ -12,6 +12,6 @@ strip = true
 
 [dependencies]
 argh = "0.1.8"
-rayon = "1.5.3"
-regex = "1.6.0"
+elf_rs = "0.2.0"
+iced-x86 = "1.17.0"
 
