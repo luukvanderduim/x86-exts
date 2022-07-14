@@ -25,16 +25,17 @@ while read -r LINE ; do
 done < <(objdump --disassemble --wide --prefix-addresses --show-raw-insn "$1")
 
 echo "Extensions:$EXTS"
+```
 
-This repository solves this problem in two different ways. You may choose either the `brute-force` or the  `self-contained`  approach but the `self-contained`rendition is orders of magnitude faster.
+This repository solves this problem in two different ways. You may choose either the `brute-force` or the  `self-contained`  approach but the `main`rendition is orders of magnitude faster.
 
 The `brute-force` method is almost a one-on-one translation of the bash script shown above, except that the Rust version does the searching in parallel.
 
-The `self-contained` branch uses the excellent crates [elf-rs](https://github.com/vincenthouyi/elf_rs), to read the elf binary format and lookup  the `.text` section and the [iced-x86](https://github.com/icedland/iced) crate which makes gathering the feature extensions simple.
+The `main` branch uses the excellent crates [elf-rs](https://github.com/vincenthouyi/elf_rs), to read the elf binary format and lookup  the `.text` section and the [iced-x86](https://github.com/icedland/iced) crate which makes gathering the feature extensions simple.
 
 ## Prerequisites
 
-The `self-contained` branch does not require the user to install external programs.
+The `main` branch does not require the user to install external programs.
 
 The `brute-force` branch however does require these utilities in path.
 
@@ -44,14 +45,16 @@ You will also need [`Zydis`](https://github.com/zyantific/zydis) on that branch.
 ## Installation
 
 ```Bash
-  $ tinker@cube:~/code$ git clone 
+  tinker@cube:~/code$ git clone https://github.com/luukvanderduim/x86-exts.git
 
-    $ tinker@cube:~/code$ cd x86-exts
+    tinker@cube:~/code$ cd x86-exts
     
-  $ tinker@cube:~/code/x86-exts$ cargo install --path=,
+  tinker@cube:~/code/x86-exts$ cargo install --path=,
 ```
 
 ## Usage
+
+example:
 
 ```Bash
 tinker@cube:~/$ x86-exts ~/.cargo/bin/rg 
