@@ -1,0 +1,17 @@
+[package]
+name = "abi-identifier"
+version = "0.1.0"
+authors = ["Luuk van der Duim <luukvanderduim@gmail.com>"]
+edition = "2018"
+
+[profile.release]
+opt-level = 3
+lto = true
+debug = 0
+strip = true
+
+[dependencies]
+argh = "0.1.8"
+rayon = "1.5.3"
+regex = "1.6.0"
+
