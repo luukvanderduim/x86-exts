@@ -1,8 +1,10 @@
 # x86-exts
 
-Finding the extension set used in a binary - fast.
+[! Important notice !]
+I found out that [iced-cpuid](<https://github.com/icedland/iced-cpuid>) is a thing. It does the job better than `x86-exts`.
+It was a worthwhile exercise for me, but I would advise to use `iced-cpuid` instead.
 
-[EDIT! Important!] I found out that [iced-cpuid](<https://github.com/icedland/iced-cpuid>) is a thing. It does the job better than this attempt. It was a worthwhile exercise, but I would advise to use `iced-cpuid` if you can.
+Finding the extension set used in a binary - fast.
 
 The Stack Overflow question [x86 dissasembler that shows instruction extensions needed](https://stackoverflow.com/questions/59545299/x86-dissasembler-that-shows-instruction-extensions-needed) has a solution that works, but may be slow, depending on your use case.
 
@@ -49,7 +51,7 @@ You will also need [`Zydis`](https://github.com/zyantific/zydis) on that branch.
 ```Bash
   tinker@cube:~/code$ git clone https://github.com/luukvanderduim/x86-exts.git
 
-    tinker@cube:~/code$ cd x86-exts
+  tinker@cube:~/code$ cd x86-exts
     
   tinker@cube:~/code/x86-exts$ cargo install --path=,
 ```
