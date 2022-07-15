@@ -2,6 +2,8 @@
 
 Finding the extension set used in a binary - fast.
 
+[EDIT! Important!] I found out that [iced-cpuid]<https://github.com/icedland/iced-cpuid>() is a thing. It does the job better than this attempt. It was a worthwhile exercise, but I would advise to use `iced-cpuid` if you can.
+
 The Stack Overflow question [x86 dissasembler that shows instruction extensions needed](https://stackoverflow.com/questions/59545299/x86-dissasembler-that-shows-instruction-extensions-needed) has a solution that works, but may be slow, depending on your use case.
 
 An answer proposes to use this shell script.
